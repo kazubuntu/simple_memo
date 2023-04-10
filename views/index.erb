@@ -1,0 +1,9 @@
+<input type="button" onclick="location.href='/memos/new'" value="追加">
+
+<ul>
+<% @memos.each do |memo| %>
+  <li>
+    <a href="/memos/<%= memo.id %>"><%= h(memo.title) %></a>
+  </li>
+<% end %>
+</ul>
