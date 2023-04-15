@@ -1,0 +1,12 @@
+<form method="post" action="/memos/<%= @memo.id %>">
+  <div>
+    <label for="title" style="display:block;">タイトル</label>
+    <input id="title" type="text" name="title" value="<%= h(@memo.title) %>" required>
+  </div>
+  <div>
+    <label for="content" style="display:block;">内容</label>
+    <textarea id="content" name="content" rows="5" cols="33"><%= h(@memo.content) %></textarea>
+  </div>
+  <input type="hidden" name="_method" value="PATCH">
+  <input type="submit" value="変更">
+</form>
