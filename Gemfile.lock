@@ -1,10 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    json (2.6.3)
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
+    pg (1.4.6)
     rack (2.2.6.4)
     rack-protection (3.0.5)
       rack
@@ -27,7 +27,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  json
+  pg
   sinatra
   sinatra-contrib
   webrick
