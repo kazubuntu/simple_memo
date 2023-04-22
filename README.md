@@ -25,9 +25,9 @@ gem install bundler
     ```
     CREATE TABLE memos
     (id      SERIAL         NOT NULL,
-    title   VARCHAR(255)   NOT NULL,
-    content TEXT                   ,
-    PRIMARY KEY (id));
+     title   VARCHAR(255)   NOT NULL,
+     content TEXT                   ,
+     PRIMARY KEY (id));
     ```
 
 ### インストール
