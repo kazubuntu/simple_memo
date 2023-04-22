@@ -12,18 +12,23 @@
 gem install bundler
 ```
 
-メモの保存にはPostgreSQLを使用します。以下のSQL文を実行し、データベースとテーブルを作成します。
-```
-CREATE DATABASE simple_memo;
-```
-
-```
-CREATE TABLE memos
-(id      SERIAL         NOT NULL,
- title   VARCHAR(255)   NOT NULL,
- content TEXT                   ,
- PRIMARY KEY (id));
-```
+メモの保存にはPostgreSQLを使用します。以下の手順でデータベースとテーブルを作成します。
+1. データベースを作成します。
+    ```
+    CREATE DATABASE simple_memo;
+    ```
+2. 作成したデータベースに接続します。
+    ```
+    \c simple_memo
+    ```
+3. テーブルを作成します。
+    ```
+    CREATE TABLE memos
+    (id      SERIAL         NOT NULL,
+    title   VARCHAR(255)   NOT NULL,
+    content TEXT                   ,
+    PRIMARY KEY (id));
+    ```
 
 ### インストール
 1. 任意のフォルダで`git clone`します。
