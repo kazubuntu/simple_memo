@@ -6,11 +6,31 @@
 ![demo](https://user-images.githubusercontent.com/123526027/230894254-07683e19-e6b9-4458-8897-b7b5a17b78c0.gif)
 
 ## インストール方法
+### 事前準備
 `Gem`のインストールに`Bundler`を使用します。インストールされていない場合は以下のコマンドでインストールする必要があります。
 ```
 gem install bundler
 ```
 
+メモの保存にはPostgreSQLを使用します。以下の手順でデータベースとテーブルを作成します。
+1. データベースを作成します。
+    ```
+    CREATE DATABASE simple_memo;
+    ```
+2. 作成したデータベースに接続します。
+    ```
+    \c simple_memo
+    ```
+3. テーブルを作成します。
+    ```
+    CREATE TABLE memos
+    (id      SERIAL         NOT NULL,
+     title   VARCHAR(255)   NOT NULL,
+     content TEXT                   ,
+     PRIMARY KEY (id));
+    ```
+
+### インストール
 1. 任意のフォルダで`git clone`します。
     ```
     git clone https://github.com/kazubuntu/simple_memo.git
